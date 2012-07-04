@@ -1,0 +1,410 @@
+Array
+(
+    [page_attributes] => Array
+        (
+        )
+
+    [title] => George Harrison
+    [page_type] => main
+    [major_sections] => Array
+        (
+            [0] => Early years: 1943–1959
+            [1] => The Beatles: 1960–1970
+            [2] => Relationships with the other Beatles
+            [3] => Solo work: 1968–1987
+            [4] => Later life: 1988–2001
+            [5] => HandMade Films: 1978–1994
+            [6] => Interest in Indian culture
+            [7] => Personal life
+            [8] => Illness and death
+            [9] => Legacy
+            [10] => Guitars
+            [11] => Solo discography
+            [12] => Notes
+            [13] => References
+            [14] => External links
+        )
+
+    [person_data] => Array
+        (
+            [name] => Harrison, George
+            [alternative_names] => Wax, Arthur; Mysterioso, L'Angelo; Wilbury, Nelson
+            [short_description] => Rock musician
+            [date_of_birth] => {{Birth date|1943|2|25|df=y}}
+            [place_of_birth] => [[Liverpool]], [[England]], [[United Kingdom]]
+            [date_of_death] => {{Death date|2001|11|29|df=y}}
+            [place_of_death] => Los Angeles, California, United States of America
+        )
+
+    [debug_el] => Array
+        (
+            [0] => 
+            [1] => {{Portal|Biography}}
+            [2] => {{Wikiquote}}
+            [3] => {{Commons category|George Harrison}}
+            [4] => * [http://georgeharrison.com/ GeorgeHarrison.com]&nbsp;— Official Site
+            [5] => * [http://www.rollingstone.com/music/news/george-harrisons-greatest-musical-moments-20011205/ RollingStone.com]&nbsp;– George's Greatest Musical Moments
+            [6] => * {{Rockhall|george-harrison}}
+            [7] => * [http://www.telegraph.co.uk/news/obituaries/1363966/George-Harrison.html George Harrison]&nbsp;– Daily Telegraph obituary
+            [8] => * {{IMDb name|id=0365600|name=George Harrison}}
+            [9] => * {{worldcat id|lccn-n84-125470}}
+            [10] => * [http://www.genesis-publications.com/books/concert/index.html Genesis Publications&nbsp;– Concert for George: A Celebration of the Life of George Harrison]
+            [11] => * [http://undercover.com.au/News-Story.aspx?id=7020 Interview with Paul Cashmere]
+            [12] => * BBC news [http://news.bbc.co.uk/1/hi/entertainment/music/1492446.stm article on Harrison's death], [http://news.bbc.co.uk/1/hi/entertainment/music/1430259.stm George Harrison: Life in pictures] and  [http://news.bbc.co.uk/1/hi/uk/583411.stm UK version with different pictures]
+            [13] => * [http://www.iskconmedia.com/photos/Prabhupada_in_London/18_Beatles%20at%20Tittenhurst/ George and other Beatles at Tittenhurst Hare Krishna temple]
+        )
+
+    [external_links] => Array
+        (
+            [0] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://georgeharrison.com/
+                            [text] => GeorgeHarrison.com
+                        )
+
+                )
+
+            [1] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://www.rollingstone.com/music/news/george-harrisons-greatest-musical-moments-20011205/
+                            [text] => RollingStone.com
+                        )
+
+                )
+
+            [2] => Array
+                (
+                    [type] => raw
+                    [text] => {{Rockhall|george-harrison}}
+                )
+
+            [3] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://www.telegraph.co.uk/news/obituaries/1363966/George-Harrison.html
+                            [text] => George Harrison
+                        )
+
+                )
+
+            [4] => Array
+                (
+                    [type] => imdb
+                    [attributes] => Array
+                        (
+                            [type] => name
+                            [id] => 0365600
+                            [name] => George Harrison
+                        )
+
+                )
+
+            [5] => Array
+                (
+                    [type] => raw
+                    [text] => {{worldcat id|lccn-n84-125470}}
+                )
+
+            [6] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://www.genesis-publications.com/books/concert/index.html
+                            [text] => Genesis Publications&nbsp;– Concert for George: A Celebration of the Life of George Harrison
+                        )
+
+                )
+
+            [7] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://undercover.com.au/News-Story.aspx?id=7020
+                            [text] => Interview with Paul Cashmere
+                        )
+
+                )
+
+            [8] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://news.bbc.co.uk/1/hi/entertainment/music/1492446.stm
+                            [text] => article on Harrison's death
+                        )
+
+                )
+
+            [9] => Array
+                (
+                    [type] => url
+                    [attributes] => Array
+                        (
+                            [url] => http://www.iskconmedia.com/photos/Prabhupada_in_London/18_Beatles%20at%20Tittenhurst/
+                            [text] => George and other Beatles at Tittenhurst Hare Krishna temple
+                        )
+
+                )
+
+        )
+
+    [categories] => Array
+        (
+            [0] => Array
+                (
+                    [0] => George Harrison| 
+                    [1] => 1943 births
+                    [2] => 2001 deaths
+                    [3] => Best Original Music Score Academy Award winners
+                    [4] => Cancer deaths in California
+                    [5] => Capitol Records artists
+                    [6] => Converts to Hinduism
+                    [7] => Deaths from lung cancer
+                    [8] => Delaney & Bonnie & Friends members
+                    [9] => English expatriates in Australia
+                    [10] => English film producers
+                    [11] => English gardeners
+                    [12] => English Hindus
+                    [13] => English male singers
+                    [14] => English multi-instrumentalists
+                    [15] => English people of Irish descent
+                    [16] => English Roman Catholics
+                    [17] => English pop singers
+                    [18] => English record producers
+                    [19] => English rock guitarists
+                    [20] => English singer-songwriters
+                    [21] => English vegetarians
+                    [22] => Grammy Award winners
+                    [23] => International Society for Krishna Consciousness
+                    [24] => Lead guitarists
+                    [25] => Members of the Order of the British Empire
+                    [26] => People educated at Liverpool Institute High School for Boys
+                    [27] => Performers of Hindu music
+                    [28] => Plastic Ono Band members
+                    [29] => Rock and Roll Hall of Fame inductees
+                    [30] => Sitar players
+                    [31] => Slide guitarists
+                    [32] => Survivors of stabbing
+                    [33] => The Beatles members
+                    [34] => The Quarrymen members
+                    [35] => Traveling Wilburys members
+                    [36] => Ukulele players
+                    [37] => Warner Music Group artists
+                    [38] => Mystics
+                    [39] => Autobiographers
+                )
+
+        )
+
+    [infoboxes] => Array
+        (
+            [0] => Array
+                (
+                    [type] =>  musical artist 
+                    [type_key] => musical_artist
+                    [contents] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [key] => name
+                                    [value] => George Harrison <br /><small>[[Order of the British Empire|MBE]]</small>
+                                )
+
+                            [1] => Array
+                                (
+                                    [key] => image
+                                    [value] => George Harrison 1974 edited.jpg
+                                )
+
+                            [2] => Array
+                                (
+                                    [key] => alt
+                                    [value] => Black-and-white shot of a moustachioed man in his early thirties with long, dark hair.
+                                )
+
+                            [3] => Array
+                                (
+                                    [key] => caption
+                                    [value] => George Harrison at the White House in 1974.
+                                )
+
+                            [4] => Array
+                                (
+                                    [key] => background
+                                    [value] => solo_singer
+                                )
+
+                            [5] => Array
+                                (
+                                    [key] => birth_name
+                                    [value] => 
+                                )
+
+                            [6] => Array
+                                (
+                                    [key] => alias
+                                    [value] => Carl Harrison<br />L'Angelo Misterioso<br />Hari Georgeson<br />Nelson/Spike Wilbury<br />George Harrysong<br />George O'Hara-Smith<br />Jairaj Hari san
+                                )
+
+                            [7] => Array
+                                (
+                                    [key] => birth_date
+                                    [value] => {{Birth date|1943|2|25|df=yes}}
+                                )
+
+                            [8] => Array
+                                (
+                                    [key] => birth_place
+                                    [value] => {{nowrap|[[Liverpool]], England, UK}}
+                                )
+
+                            [9] => Array
+                                (
+                                    [key] => death_date
+                                    [value] => {{Death date and age|2001|11|29|1943|2|25|df=yes}}
+                                )
+
+                            [10] => Array
+                                (
+                                    [key] => death_place
+                                    [value] => {{nowrap|[[Los Angeles]], California, US}}
+                                )
+
+                            [11] => Array
+                                (
+                                    [key] => instrument
+                                    [value] => [[Singing|Vocals]], [[guitar]], [[ukulele]], [[harmonica]], [[mandolin]], [[tambura]], [[sarod]], [[swarmandal]], [[Bass guitar|bass]], [[Keyboard instrument|keyboards]], [[violin]], [[sitar]]
+                                )
+
+                            [12] => Array
+                                (
+                                    [key] => genre
+                                    [value] => [[Rock music|Rock]], [[pop music|pop]], [[psychedelic rock]], [[experimental music|experimental]], [[world music]]
+                                )
+
+                            [13] => Array
+                                (
+                                    [key] => occupation
+                                    [value] => Musician, singer-songwriter, actor, record and film producer
+                                )
+
+                            [14] => Array
+                                (
+                                    [key] => years_active
+                                    [value] => 1958–2001
+                                )
+
+                            [15] => Array
+                                (
+                                    [key] => label
+                                    [value] => [[Parlophone]], [[Capitol Records|Capitol]], [[Swan Records|Swan]], [[Apple Records|Apple]], [[Vee-Jay Records|Vee-Jay]], [[EMI Records|EMI]], [[Dark Horse Records|Dark Horse]]
+                                )
+
+                            [16] => Array
+                                (
+                                    [key] => associated_acts
+                                    [value] => [[The Quarrymen]], [[The Beatles]], [[Traveling Wilburys]], [[Dhani Harrison]], [[Ravi Shankar]], [[Eric Clapton]]
+                                )
+
+                            [17] => Array
+                                (
+                                    [key] => website
+                                    [value] => {{URL|http://www.georgeharrison.com}}
+                                )
+
+                            [18] => Array
+                                (
+                                    [key] => notable_instruments
+                                    [value] => <!--BEFORE adding to this list please get consensus on the talk page -->[[Gretsch]] Country Gentleman<br />[[List of Stratocaster players#F–J|"Rocky"]]<br />[[Lucy (guitar)|"Lucy"]]<br />[[List of Telecaster players#F-J|Rosewood Telecaster]]<!--BEFORE adding to this list please get consensus on the talk page -->
+                                )
+
+                        )
+
+                )
+
+        )
+
+    [foreign_wiki] => Array
+        (
+            [ar] => جورج هاريسون
+            [ay] => George Harrison
+            [az] => Corc Harrison
+            [bn] => জর্জ হ্যারিসন
+            [be] => Джордж Харысан
+            [bg] => Джордж Харисън
+            [ca] => George Harrison
+            [cs] => George Harrison
+            [cy] => George Harrison
+            [da] => George Harrison
+            [de] => George Harrison
+            [et] => George Harrison
+            [el] => Τζωρτζ Χάρισον
+            [es] => George Harrison
+            [eo] => George Harrison
+            [eu] => George Harrison
+            [fa] => جورج هریسون
+            [fo] => George Harrison
+            [fr] => George Harrison
+            [fy] => George Harrison
+            [ga] => George Harrison
+            [gd] => George Harrison
+            [ko] => 조지 해리슨
+            [hy] => Ջորջ Հարրիսոն
+            [hi] => जार्ज हरिसन
+            [hr] => George Harrison
+            [io] => George Harrison
+            [id] => George Harrison
+            [zu] => George Harrison
+            [is] => George Harrison
+            [it] => George Harrison
+            [he] => ג'ורג' האריסון
+            [kn] => ಜಾರ್ಜ್ ಹ್ಯಾರಿಸನ್
+            [ka] => ჯორჯ ჰარისონი
+            [kk] => Джордж Харрисон
+            [sw] => George Harrison
+            [la] => Georgius Harrison
+            [lv] => Džordžs Harisons
+            [lt] => George Harrison
+            [hu] => George Harrison
+            [mk] => Џорџ Харисон
+            [mr] => जॉर्ज हॅरिसन
+            [nl] => George Harrison
+            [ne] => जर्ज ह्यारिसन
+            [ja] => ジョージ・ハリスン
+            [no] => George Harrison
+            [nn] => George Harrison
+            [oc] => George Harrison
+            [pl] => George Harrison
+            [pt] => George Harrison
+            [ro] => George Harrison
+            [qu] => George Harrison
+            [ru] => Харрисон, Джордж
+            [sc] => George Harrison
+            [sq] => George Harrison
+            [simple] => George Harrison
+            [sk] => George Harrison
+            [sl] => George Harrison
+            [sr] => Џорџ Харисон
+            [sh] => George Harrison
+            [fi] => George Harrison
+            [sv] => George Harrison
+            [tl] => George Harrison
+            [th] => จอร์จ แฮร์ริสัน
+            [tr] => George Harrison
+            [uk] => Джордж Гаррісон
+            [vi] => George Harrison
+            [zh] => 乔治·哈里森
+        )
+
+)
