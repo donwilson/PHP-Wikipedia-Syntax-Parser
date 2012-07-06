@@ -390,11 +390,11 @@
 		private function categories() {
 			$categories = array();
 			
-			preg_match_all("#\[\[Category\:([^\]\]]+?)\]\]#si", $this->text, $matches);
+			preg_match_all("#\[\[(?:\s*?)Category\:([^\]\]]+?)\]\]#si", $this->text, $matches);
 			
 			if(!empty($matches[0])) {
 				foreach($matches[1] as $nil => $mvalue) {
-					$categories = $matches[1];
+					$categories[] = trim($mvalue);
 				}
 			}
 			
