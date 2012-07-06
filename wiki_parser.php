@@ -1,20 +1,27 @@
 <?php
 	
 	/**
-	 * PHP Wikipedia Syntax Parser
-	 *
-	 * @link		https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser
-	 *
-	 * @package		Jungle
-	 * @subpackage	Wikipedia Syntax Parser
-	 *
-	 * @todo		Citations: http://en.wikipedia.org/wiki/Wikipedia:Citation_templates
+	 * Jungle Wikipedia Syntax Parser
+	 * 
+	 * @link https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser
+	 * 
+	 * @author Don Wilson <donwilson@gmail.com>
+	 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
+	 * @package Jungle
+	 * @subpackage Wikipedia Syntax Parser
+	 * 
+	 * @todo Add option for extracting only specific types of information - Jungle_WikiSyntax_Parser::set_extract(array('page_attributes', 'major_sections', 'external_links'))
+	 * @todo Toggle debug mode - Jungle_WikiSyntax_Parser::show_debug() and Jungle_WikiSyntax_Parser::hide_debug()
 	 */
 	
 	class Jungle_WikiSyntax_Parser {
 		private $text = "";
 		private $title = "";
 		private $cargo = array();
+		
+		/**
+		 * @param string $text Raw Wikipedia syntax (found via a Page's Edit textarea or from the Wikiepdia Data Dump page->revision->text)
+		 */
 		
 		public function __construct($text, $title="") {
 			$this->text = $text;
@@ -23,10 +30,14 @@
 			$this->cargo['page_attributes'] = array();
 		}
 		
+		/**
+		 * @return array Contents of $this->cargo
+		 */
+		
 		public function parse() {
 			$this->initial_clean();
 			
-			$this->page_type();
+			$this->page_attributes();
 			$this->major_sections();
 			$this->person_data();
 			$this->external_links();
@@ -41,71 +52,98 @@
 		}
 		
 		
-		// Extract information
+		// Information extractors
 		
-		private function page_type() {
-			if(preg_match("#^(Template|Wikipedia|Portal|User|File|MediaWiki|Template|Category|Book|Help|Course|Institution)\:#si", $this->title, $match)) {
+		/**
+		 * 
+		 */
+		
+		private function page_attributes() {
+			$page_attributes = array(
+				 'type' => false
+				,'child_of' => ""
+			);
+			
+			if($page_attributes['type'] === false && (preg_match("#^(Template|Wikipedia|Portal|User|File|MediaWiki|Template|Category|Book|Help|Course|Institution)\:#si", $this->title, $match))) {
 				// special wikipedia pages
 				
-				$this->cargo['page_type'] = strtolower($match['1']);
-				
-				return;
+				$page_attributes['type'] = strtolower($match['1']);
 			}
 			
-			if(preg_match("#\#REDIRECT(?:\s*?)\[\[([^\]]+?)\]\]#si", $this->text, $match)) {
+			if($page_attributes['type'] === false && (preg_match("#\#REDIRECT(?:\s*?)\[\[([^\]]+?)\]\]#si", $this->text, $match))) {
 				// redirection
 				
-				$this->cargo['page_type'] = "redirect";
-				$this->cargo['child_of'] = $match[1];
-				
-				return;
+				$page_attributes['type'] = "redirect";
+				$page_attributes['child_of'] = $match[1];
 			}
 			
-			if(preg_match("#\{\{(disambig|hndis|disamb|hospitaldis|geodis|disambiguation|mountainindex|roadindex|school disambiguation|hospital disambiguation|mathdab|math disambiguation)((\|[^\}]+?)?)\}\}#si", $this->text, $match)) {
+			if($page_attributes['type'] === false && (preg_match("#\{\{(disambig|hndis|disamb|hospitaldis|geodis|disambiguation|mountainindex|roadindex|school disambiguation|hospital disambiguation|mathdab|math disambiguation)((\|[^\}]+?)?)\}\}#si", $this->text, $match))) {
 				// disambiguation file
 				
-				$this->cargo['page_type'] = "disambiguation";
-				$this->cargo['page_attributes']['disambiguation_key'] = $match[1];
+				$page_attributes['type'] = "disambiguation";
+				$page_attributes['disambiguation_key'] = $match[1];
 				
 				if(!empty($match[2])) {
-					$this->cargo['page_attributes']['disambiguation_value'] = $match[2];
+					$page_attributes['disambiguation_value'] = $match[2];
 				}
 				
 				return;
 			}
 			
-			// just a normal page
-			$this->cargo['page_type'] = "main";
+			if($page_attributes['type'] === false) {
+				// just a normal page
+				$page_attributes['type'] = "main";
+			}
+			
+			$this->cargo['page_attributes'] = $page_attributes;
 		}
+		
+		/**
+		 * @todo Some pages use {{MLB infobox ... }} instead of {{Infobox MLB ... }} [ex: http://en.wikipedia.org/wiki/Texas_Rangers_(baseball)]. I think {{MLB ...}} is an actual Wikipedia template and not distinctly an Infobox template
+		 */
 		
 		private function infoboxes() {
 			$infobox = array();
 			
-			preg_match_all("#\{\{Infobox(?:\s*?)(.+?)". PHP_EOL ."(.+?)". PHP_EOL ."\}\}". PHP_EOL ."#si", $this->text, $matches);
+			preg_match_all("#\{\{(?:\s*?)Infobox(?:\s*?)(.+?)". PHP_EOL ."(.+?)". PHP_EOL ."\}\}". PHP_EOL ."#si", $this->text, $matches);
 			
 			if(!empty($matches[0])) {
 				foreach($matches[0] as $key => $nil) {
 					$infobox_values = array();
 					$infobox_tmp = $matches[2][$key];
 					
-					$infobox_tmp = explode(PHP_EOL, $infobox_tmp);
+					$infobox_tmp = explode("\n", $infobox_tmp);
+					$last_line_key = "";
 					
 					foreach($infobox_tmp as $line) {
-						$line = preg_replace("#^\|(\s*?)#si", "", $line);
-						$bits = explode("=", $line, 2);
-						$line_key = trim(preg_replace("#[^A-Za-z0-9]#si", "_", strtolower($bits[0])), "_");
-						$line_value = trim($bits[1]);
+						$line = trim($line);
 						
-						$infobox_values[] = array(
-							 'key' => $line_key
-							,'value' => $line_value
-						);
+						if(preg_match("#^\|#si", $line)) {
+							$line = preg_replace("#^\|(\s*?)#si", "", $line);
+							$bits = explode("=", $line, 2);
+							
+							$line_key = trim(preg_replace("#[^A-Za-z0-9]#si", "_", strtolower($bits[0])), "_");
+							$line_value = trim($bits[1]);
+							
+							$infobox_values[$line_key] = array();
+						} else {
+							if(!isset($infobox_values[$last_line_key])) {
+								continue;   // this is likely an editor message of some sort
+							}
+							
+							$line_key = $last_line_key;
+							$line_value = $line;
+						}
+						
+						$line_values = preg_split("#<(?:\s*?)br(?:\s*?)(/?)(?:\s*?)>#si", $line_value, -1, PREG_SPLIT_NO_EMPTY);
+						
+						$infobox_values[$line_key] = array_merge($infobox_values[$line_key], $line_values);
+						
+						$last_line_key = $line_key;
 					}
 					
 					$infobox[] = array(
 						 'type' => $matches[1][$key]
-						,'type_key' => trim(preg_replace("#[^A-Za-z0-9]#si", "_", strtolower($matches[1][$key])), "_")
-						//,'raw_insides' => $matches[2][$key]
 						,'contents' => $infobox_values
 					);
 				}
@@ -117,16 +155,20 @@
 		private function major_sections() {
 			$major_sections = array();
 			
-			// ... preg_split ...
+			$major_sections_splits = preg_split("#(?:\s{1,})==(?:\s*?)([^=]+?)(?:\s*?)==#si", $this->text, -1, PREG_SPLIT_DELIM_CAPTURE);
 			
-			preg_match_all("#==([^=]+?)==". PHP_EOL ."#si", $this->text, $matches);
+			$this->cargo['intro_section'] = array_shift($major_sections_splits);
 			
-			if(!empty($matches[0])) {
-				foreach($matches[1] as $section_title) {
-					$major_sections[] = trim($section_title);
+			if(!empty($major_sections_splits)) {
+				foreach($major_sections_splits as $key => $text) {
+					if(($key % 2) == 1) {
+						$major_sections[] = array(
+							 'title' => $major_sections_splits[($key - 1)]
+							,'text' => $major_sections_splits[$key]
+						);
+					}
 				}
 			}
-			
 			
 			$this->cargo['major_sections'] = $major_sections;
 		}
@@ -157,12 +199,12 @@
 		private function external_links() {
 			$external_links = array();
 			
-			preg_match("#". PHP_EOL ."==(?:\s*?)External links(?:\s*?)==(.+?)". PHP_EOL . PHP_EOL ."#si", $this->text, $matches);
+			preg_match("#". PHP_EOL ."==(?:\s*?)External(?:\s{1,}?)links(?:\s*?)==(.+?)". PHP_EOL . PHP_EOL ."#si", $this->text, $matches);
 			
 			if(!empty($matches[1])) {
-				$lines = explode("\n", $matches[1]);
+				$lines = explode("\n", $matches[1]);   // \n is better than PHP_EOL as the line separators in the wiki syntax might not be the same as the OS-specific PHP_EOL [maybe there's a better way of doing this?]
 				
-				$this->cargo['debug_el'] = $lines;
+				$this->cargo['debug_el'] = $lines;   // temporary
 				
 				if(!empty($lines)) {
 					foreach($lines as $line) {
@@ -348,10 +390,12 @@
 		private function categories() {
 			$categories = array();
 			
-			preg_match_all("#\[\[Category\:([^\]]+?)\]\]#si", $this->text, $matches);
+			preg_match_all("#\[\[Category\:([^\]\]]+?)\]\]#si", $this->text, $matches);
 			
 			if(!empty($matches[0])) {
-				$categories[] = $matches[1];
+				foreach($matches[1] as $nil => $mvalue) {
+					$categories = $matches[1];
+				}
 			}
 			
 			$this->cargo['categories'] = $categories;
@@ -366,12 +410,14 @@
 				foreach($matches[0] as $mkey => $nil) {
 					$foreign_wikis[ $matches[1][$mkey] ] = trim($matches[2][$mkey]);
 				}
-				
-				unset($mkey, $nil);
 			}
 			
 			$this->cargo['foreign_wiki'] = $foreign_wikis;
 		}
+		
+		/**
+		 * @todo http://en.wikipedia.org/wiki/Wikipedia:Citation_templates
+		 */
 		
 		private function citations() {
 			$citations = array();
@@ -387,9 +433,10 @@
 		private function initial_clean() {
 			// strip out the crap we don't need
 			
-			$this->cargo['title'] = $this->title;
+			$this->cargo['title'] = trim($this->title);
 			
-			$this->text = PHP_EOL . PHP_EOL . preg_replace("#<!\-\- (.+?) \-\->#si", "", $this->text) . PHP_EOL . PHP_EOL;   // the wrapped PHP_EOL adds for easier regex matches
+			$this->text = preg_replace("#<!\-\-(.+?)\-\->#si", "", $this->text);   // get rid of unneeded Editor comments
+			$this->text = PHP_EOL . PHP_EOL . $this->text . PHP_EOL . PHP_EOL;   // the wrapped PHP_EOL adds for easier regex matches
 		}
 		
 		private function pack_cargo() {
