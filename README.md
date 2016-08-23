@@ -1,6 +1,6 @@
 ## JungleDB PHP Wikipedia Parser
 
-This is an attempt at extracting useful information out of raw Wikipedia page syntax, written as a portable PHP class. Originally written for JungleDB. Released the most recently updated (2016-02-13) version of the wiki_parser.php script, which is a significant improvement over the last copy.
+This is an attempt at extracting useful information out of raw Wikipedia page syntax, written as a portable PHP class. Originally written for JungleDB. Released the most recently updated (2015-02-13) version of the wiki_parser.php script, which is a significant improvement over the last copy.
 
 I don't expect to update this repository in the forseeable future.
 
