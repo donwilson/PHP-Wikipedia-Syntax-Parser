@@ -14,7 +14,7 @@ I don't expect to update this repository in the forseeable future.
 	
 2. `$parsed_wiki_syntax = $wikipedia_syntax_parser->parse();`
 
-	Your `$parsed_wiki_syntax` variable becomes an array with information about the Wiki page itself and useful information extracted from within. An example of this output, after parsing [sample_input.txt](https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser/blob/master/sample_input.txt), can be found in [sample_output.txt](https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser/blob/master/sample_output.txt).
+	Your `$parsed_wiki_syntax` variable becomes an array with information about the Wiki page itself and useful information extracted from within. An example of this output (using the old_version/wiki_parser.php), after parsing [sample_input.txt](https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser/blob/master/sample_input.txt), can be found in [sample_output.txt](https://github.com/donwilson/PHP-Wikipedia-Syntax-Parser/blob/master/old_version/sample_output.txt).
 
 
 #### Notes
