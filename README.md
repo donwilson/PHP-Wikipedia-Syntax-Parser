@@ -1,6 +1,6 @@
-## Jungle PHP Wikipedia Parser
+## JungleDB PHP Wikipedia Parser
 
-This is an attempt at extracting useful information out of raw Wikipedia page syntax, written as a portable PHP class.
+This is an attempt at extracting useful information out of raw Wikipedia page syntax, written as a portable PHP class. Originally written for JungleDB.
 
 
 #### How to use
