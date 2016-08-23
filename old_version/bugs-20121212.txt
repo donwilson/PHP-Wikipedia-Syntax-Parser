@@ -1,0 +1,12 @@
+
+Notice: Undefined index: bio in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
+
+Notice: Undefined index: na#e in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
+
+Notice: Undefined index: na#e in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
+
+Notice: Undefined index: b title in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
+
+Notice: Undefined index: namr in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
+
+Notice: Undefined index:  in /var/www/nodes/jungle.dev/dev/jungle_wikipedia_parser/wiki_parser.php on line 1360
