@@ -1,0 +1,37 @@
+{| class="wikitable"
+! rowspan="2" | Character !! rowspan="2" | Portrayed by !! colspan="5" | Seasons
+|-
+! width="5%" | [[Alias (season 1)|1]] !! width="5%" | [[Alias (season 2)|2]] !! width="5%" | [[Alias (season 3)|3]]  !! width="5%" | [[Alias (season 4)|4]] !! width="5%" | [[Alias (season 5)|5]] 
+|-
+| [[Anna Espinosa]] || [[Gina Torres]] ||  colspan="1" {{no2|Recurring}} || colspan="2" {{n/a|}} ||  colspan="1" {{no2|Recurring}} || {{no2|Guest}}
+|-
+| [[Katya Derevko]] || [[Isabella Rossellini]] ||  colspan="2" {{n/a|}} || colspan="2" {{no2|Recurring}} || {{n/a|}} 
+|-
+| [[Elena Derevko]] || [[Sônia Braga]] ||  colspan="3" {{n/a|}} || colspan="1" {{no2|Recurring}} || colspan="1" {{n/a|}} 
+|-
+| FBI Assistant Director Kendall || [[Terry O'Quinn]] ||  colspan="1" {{no2|Guest}} || colspan="1" {{no2|Recurring}} || colspan="1" {{no2|Guest}} || colspan="2" {{n/a|}} 
+|-
+| Dr. Judy Barnett || [[Patricia Wettig]] ||  colspan="3" {{no2|Recurring}}  || colspan="2" {{n/a|}} 
+|-
+| [[Emily Sloane]] || [[Amy Irving]] ||  colspan="2" {{no2|Recurring}}  || colspan="1" {{n/a|}} ||  colspan="1" {{no2|Guest}} || colspan="1" {{n/a|}}
+|-
+| [[Carrie Bowman]] || [[Amanda Foreman (actress)|Amanda Foreman]] || colspan="1" {{n/a|}} || colspan="2" {{no2|Recurring}}  || colspan="1" {{no2|Guest}} || colspan="1" {{no2|Recurring}}
+|-
+| CIA Director Arthur Devlin || [[James Handy]] ||  colspan="1" {{no2|Recurring}}  || colspan="1" {{no2|Guest}} || colspan="2" {{n/a|}} || colspan="1" {{no2|Recurring}}
+|-
+| Jenny || [[Sarah Shahi]] ||  colspan="1" {{no2|Recurring}}  || colspan="4" {{n/a|}} 
+|-
+| Charlie Bernard || [[Evan Parke]] ||  colspan="1" {{no2|Recurring}}  || colspan="4" {{n/a|}} 
+|-
+| Steven Haladki || [[Joey Slotnick]] ||  colspan="1" {{no2|Recurring}}  || colspan="4" {{n/a|}} 
+|-
+| NSC Director Robert Lindsey || [[Kurt Fuller]] || colspan="2" {{n/a|}} || colspan="1" {{no2|Recurring}}  || colspan="2" {{n/a|}} 
+|-
+| Calvin McCullough || [[Angus Scrimm]] ||  colspan="1" {{no2|Recurring}}  || colspan="1" {{no2|Guest}} || colspan="1" {{n/a|}} || colspan="1" {{no2|Guest}} || colspan="2" {{n/a|}}
+|-
+| CIA Director Hayden Chase || [[Angela Bassett]] || colspan="3" {{n/a|}} || colspan="1" {{no2|Recurring}}  || colspan="1" {{n/a|}}  
+|-
+| Diane Dixon || Yvonne Farrow ||  colspan="2" {{no2|Recurring}}  || colspan="3" {{n/a|}} 
+|-
+| Dr. Zhang Lee || [[Ric Young]] ||  colspan="2" {{no2|Recurring}}  || colspan="1" {{no2|Guest}} || colspan="2" {{n/a|}} 
+|}
