@@ -20,3 +20,8 @@ I don't expect to update this repository in the forseeable future.
 #### Notes
 
 - When reading Wiki syntax files from disk, make sure they are properly encoded in *UTF-8*. To read these correctly encoded files, please use `implode(file('WIKI_RAW_SYNTAX.TXT'))` as `file_get_contents('WIKI_RAW_SYNTAX.TXT')` seems to mess up language-specific characters.
+
+
+#### Usage
+
+If you make use of all or any portion of this code, please add an attribution linking to this github repo.
